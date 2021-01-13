@@ -8,11 +8,11 @@ Define first or declare as a variable
 - Number of Bits.
 - Voltage Reference.
 */
-#define Clock_division 2
+#define Clock_Division 2
 #define Num_Bits 14
 #define V_Ref 5
 
-MCP331 mcp331(10, Clockdivision, Num_Bits);
+MCP331 mcp331(10, Clock_Division, Num_Bits);
 
 void setup(){
     mcp331.begin();    

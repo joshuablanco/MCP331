@@ -38,6 +38,6 @@ class MCP331{
     private:
     int _chipSelector = 0;
     double _periodArduinoDivision = 0;   
-    uint8_t _numBits = 14
+    uint8_t _numBits = 14;
 };
 #endif
