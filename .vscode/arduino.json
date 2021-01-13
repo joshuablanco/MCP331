@@ -1,4 +1,0 @@
-{
-    "board": "arduino:avr:uno",
-    "sketch": "examples\\MCP33121\\MCP33121.ino"
-}
