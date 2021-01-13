@@ -30,7 +30,7 @@ SOFTWARE.
 
 class MCP331{
     public:
-    MCP331(int CS = 10, uint8_t clockDivider, uint8_t numBits);
+    MCP331(int CS, uint8_t clockDivider, uint8_t numBits);
     void begin();
     uint16_t readMCP331();
     void reCalibrate();

@@ -4,9 +4,10 @@
 
 // Suggested CS = 10
 
-MCP331::MCP331(int CS, int clockDivider, uint8_t numBits){    
+MCP331::MCP331(int CS, uint8_t clockDivider, uint8_t numBits){    
     _chipSelector = CS;
     _numBits = numBits;
+
     double _offsetTimming = 64.0;// time with no activity to the ADC
     double _fAtmega328 = 16000000.0;
     double _division = _fAtmega328/clockDivider;
@@ -56,7 +57,6 @@ uint16_t MCP331::readMCP331(){
     else if(_numBits == 16) {val = val;}
     else if(_numBits == 12) {val = val>> 4;}
     return val;
-
 }
 
 void MCP331::reCalibrate(){
