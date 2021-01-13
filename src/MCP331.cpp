@@ -11,7 +11,7 @@ MCP331::MCP331(int CS, uint8_t clockDivider, uint8_t numBits){
     double _offsetTimming = 64.0;// time with no activity to the ADC
     double _fAtmega328 = 16000000.0;
     double _division = _fAtmega328/clockDivider;
-    _periodArduinoDivision = (1024/division) + _offsetTimming;
+    _periodArduinoDivision = (1024/_division) + _offsetTimming;
 
     switch(clockDivider){
         case 2:
@@ -50,9 +50,9 @@ void MCP331::begin(void){
 uint16_t MCP331::readMCP331(){
     digitalWrite(_chipSelector, LOW);
     uint8_t _msb = SPI.transfer(0xFF);
-    uint8_t lsb = SPI.transfer(0xFF);
+    uint8_t _lsb = SPI.transfer(0xFF);
     digitalWrite(_chipSelector, HIGH);
-    uint16_t val = (((uint16_t) msb << 8)| lsb);
+    uint16_t val = (((uint16_t) _msb << 8) | _lsb);
     if(_numBits == 14) {val = val >> 2;}//for 14 bits
     else if(_numBits == 16) {val = val;}
     else if(_numBits == 12) {val = val>> 4;}
