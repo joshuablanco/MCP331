@@ -2,7 +2,7 @@
 //joshua.andres.blanco@gmail.com
 
 /*===========================================================================
-MCP33121 device library code is placed under the MIT license
+MCP331 device library code is placed under the MIT license
 Copyright (c) 2021 Joshua Blanco
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
