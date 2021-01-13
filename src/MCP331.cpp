@@ -65,7 +65,7 @@ void MCP331::reCalibrate(){
     digitalWrite(_chipSelector, LOW);
     delayMicroseconds(_periodArduinoDivision);   
     uint8_t sdo = SPI.transfer(0xFF);
-    while(sdo == 0X00) delayMicroSeconds(700);
+    while(sdo == 0X00) delayMicroseconds(700);
     digitalWrite(_chipSelector,HIGH);
     Serial.println("Done...!");
 }
