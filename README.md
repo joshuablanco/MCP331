@@ -1,4 +1,4 @@
-#** MCP331## **
+#  MCP331 
 Contains the library for MCP331##. I required for my final year thesis.
 Feel free to give in constructive feedback on my email id joshua.andres.blanco@gmail.com
 
